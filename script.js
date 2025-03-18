@@ -17,7 +17,7 @@ let header = container.querySelector('h1')
 let label = document.querySelectorAll('label')
 let button = document.querySelector('button')
 
-function loadQuastions() {
+function loadQuestions() {
     let q = questions[number_questoin]
     header.innerHTML = q.question
     for (let i = 0; i < label.length; i += 1) {
@@ -40,7 +40,7 @@ button.addEventListener('click', function(){
     score += getSelectedScore()
     number_questoin += 1
     if (number_questoin < questions.length) {
-        loadQuastions()
+        loadQuestions()
     } else {
         let massage = ''
         if (score >= 70) {
@@ -58,4 +58,4 @@ button.addEventListener('click', function(){
     }
 })
 
-loadQuastions()
+loadQuestions()
